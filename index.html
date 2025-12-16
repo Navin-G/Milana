@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MILANA | Plant a Smile</title>
+  <style>
+    :root {
+      --green: #6b8e23; /* olive green */
+      --brown: #8b5a2b; /* earthy brown */
+      --beige: #f5f3ee;
+      --dark: #2f3e2f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--beige);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green), var(--brown));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: var(--green);
+      font-size: 2.2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-box {
+      background: #e7e7e7;
+      height: 180px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .whatsapp:hover {
+      background: #1ebe5d;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/new-logo.jpg" alt="MILANA Logo" style="max-width:160px; margin-bottom:15px;" />
+    <h1>MILANA</h1>
+    <p>Plant a Smile 🌱</p>
+  </header>
+
+  <section>
+    <div class="section-title">
+      <h2>Pots</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="images/pot-1.jpg" alt="MILANA Pot" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Eco Clay Pot</h3>
+        <p>Natural, breathable and perfect for indoor plants.</p>
+      </div>
+      <div class="card">
+        <img src="images/pot-1.jpg" alt="MILANA Pot" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Minimal Ceramic Pot</h3>
+        <p>Elegant designs for modern homes and gifting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Indoor Plants</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="images/plant-1.jpg" alt="MILANA Plant" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Lucky Bamboo</h3>
+        <p>Symbol of positivity and growth.</p>
+      </div>
+      <div class="card">
+        <img src="images/plant-1.jpg" alt="MILANA Plant" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Snake Plant</h3>
+        <p>Low maintenance & air purifying.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Packaging & Hampers</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="images/packaging-1.jpg" alt="MILANA Packaging" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Eco Gift Box</h3>
+        <p>Plastic-free, recyclable and premium looking.</p>
+      </div>
+      <div class="card">
+        <img src="images/packaging-1.jpg" alt="MILANA Packaging" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
+        <h3>Return Gift Hamper</h3>
+        <p>Perfect for weddings, events and corporate gifting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>About MILANA</h2>
+    </div>
+    <div class="about">
+      <p>
+        MILANA is an eco-conscious gifting brand focused on spreading happiness through nature.
+        Every product is thoughtfully curated to be sustainable, meaningful, and beautiful.
+        We believe even a small plant can <strong>plant a smile</strong>.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MILANA | Plant a Smile</p>
+    <p>Instagram: @milana_eco_gifts</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">
+    WhatsApp Order Now
+  </a>
+
+</body>
+</html>
