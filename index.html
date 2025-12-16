@@ -4,28 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MILANA | Plant a Smile</title>
+
   <style>
     :root {
-      --green: #6b8e23; /* olive green */
-      --brown: #8b5a2b; /* earthy brown */
-      --beige: #f5f3ee;
-      --dark: #2f3e2f;
+      --olive: #6f7f3a;
+      --earth: #6b4a2b;
+      --cream: #f6f3ee;
+      --dark: #2f2a24;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--beige);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--cream);
       color: var(--dark);
-      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, var(--green), var(--brown));
-      color: white;
-      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--earth), var(--olive));
+      padding: 70px 20px;
       text-align: center;
+      color: white;
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 20px;
     }
 
     header h1 {
@@ -35,63 +40,85 @@
 
     header p {
       font-size: 1.2rem;
-      margin-top: 10px;
+      opacity: 0.95;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1100px;
+      padding: 70px 20px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .section-title {
+    .title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
-    .section-title h2 {
-      color: var(--green);
-      font-size: 2.2rem;
+    .title h2 {
+      font-size: 2.4rem;
+      color: var(--olive);
+    }
+
+    /* CAROUSEL */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 18s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(0); }
+      38% { transform: translateX(-100%); }
+      66% { transform: translateX(-100%); }
+      71% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
     }
 
     .card {
       background: white;
+      border-radius: 22px;
+      padding: 25px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover { transform: translateY(-6px); }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
       border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .image-box {
-      background: #e7e7e7;
-      height: 180px;
-      border-radius: 12px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 0.9rem;
+      margin-bottom: 18px;
     }
 
     .card h3 {
-      color: var(--brown);
+      color: var(--earth);
       margin-bottom: 8px;
     }
 
     .about {
       text-align: center;
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       font-size: 1.05rem;
     }
@@ -100,7 +127,7 @@
       background: var(--dark);
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
     }
 
     .whatsapp {
@@ -109,105 +136,40 @@
       right: 25px;
       background: #25D366;
       color: white;
-      padding: 14px 22px;
-      border-radius: 50px;
-      font-weight: bold;
+      padding: 15px 26px;
+      border-radius: 60px;
       text-decoration: none;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      font-weight: bold;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
 
-    .whatsapp:hover {
-      background: #1ebe5d;
-    }
+    .whatsapp:hover { background: #1ebe5d; }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
+    @media(max-width:600px){
+      header h1{ font-size:2.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="images/new-logo.jpg" alt="MILANA Logo" style="max-width:160px; margin-bottom:15px;" />
-    <h1>MILANA</h1>
-    <p>Plant a Smile 🌱</p>
-  </header>
+<header>
+  <img src="images/new-logo.jpg" alt="MILANA logo" />
+  <h1>MILANA</h1>
+  <p>Plant a Smile 🌱</p>
+</header>
 
-  <section>
-    <div class="section-title">
-      <h2>Pots</h2>
+<section>
+  <div class="title"><h2>Our Green Collection</h2></div>
+  <div class="carousel">
+    <div class="slides">
+      <img src="images/plant-1.jpg" />
+      <img src="images/pot-1.jpg" />
+      <img src="images/packaging-1.jpg" />
     </div>
-    <div class="grid">
-      <div class="card">
-        <img src="images/pot-1.jpg" alt="MILANA Pot" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Eco Clay Pot</h3>
-        <p>Natural, breathable and perfect for indoor plants.</p>
-      </div>
-      <div class="card">
-        <img src="images/pot-1.jpg" alt="MILANA Pot" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Minimal Ceramic Pot</h3>
-        <p>Elegant designs for modern homes and gifting.</p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="section-title">
-      <h2>Indoor Plants</h2>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <img src="images/plant-1.jpg" alt="MILANA Plant" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Lucky Bamboo</h3>
-        <p>Symbol of positivity and growth.</p>
-      </div>
-      <div class="card">
-        <img src="images/plant-1.jpg" alt="MILANA Plant" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Snake Plant</h3>
-        <p>Low maintenance & air purifying.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">
-      <h2>Packaging & Hampers</h2>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <img src="images/packaging-1.jpg" alt="MILANA Packaging" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Eco Gift Box</h3>
-        <p>Plastic-free, recyclable and premium looking.</p>
-      </div>
-      <div class="card">
-        <img src="images/packaging-1.jpg" alt="MILANA Packaging" style="width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;" />
-        <h3>Return Gift Hamper</h3>
-        <p>Perfect for weddings, events and corporate gifting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-title">
-      <h2>About MILANA</h2>
-    </div>
-    <div class="about">
-      <p>
-        MILANA is an eco-conscious gifting brand focused on spreading happiness through nature.
-        Every product is thoughtfully curated to be sustainable, meaningful, and beautiful.
-        We believe even a small plant can <strong>plant a smile</strong>.
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 MILANA | Plant a Smile</p>
-    <p>Instagram: @milana_eco_gifts</p>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">
-    WhatsApp Order Now
-  </a>
-
-</body>
-</html>
+<section>
+  <div class="title"><h2>Pots</h2></div>
+  <div class="grid">
+    <div class="card"><img src="images/pot-1.jpg" /><h3>Ceramic Pot</h
