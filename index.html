@@ -1,175 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MILANA | Plant a Smile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Classy Website</title>
 
-  <style>
-    :root {
-      --olive: #6f7f3a;
-      --earth: #6b4a2b;
-      --cream: #f6f3ee;
-      --dark: #2f2a24;
-    }
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--earth), var(--olive));
-      padding: 70px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.95;
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .title h2 {
-      font-size: 2.4rem;
-      color: var(--olive);
-    }
-
-    /* CAROUSEL */
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 22px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    .slides {
-      display: flex;
-      width: 300%;
-      animation: slide 18s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      33% { transform: translateX(0); }
-      38% { transform: translateX(-100%); }
-      66% { transform: translateX(-100%); }
-      71% { transform: translateX(-200%); }
-      100% { transform: translateX(-200%); }
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 22px;
-      padding: 25px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.1);
-      transition: transform 0.35s ease;
-    }
-
-    .card:hover { transform: translateY(-6px); }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      color: var(--earth);
-      margin-bottom: 8px;
-    }
-
-    .about {
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-      font-size: 1.05rem;
-    }
-
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: white;
-      padding: 15px 26px;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    }
-
-    .whatsapp:hover { background: #1ebe5d; }
-
-    @media(max-width:600px){
-      header h1{ font-size:2.2rem; }
-    }
-  </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <img src="images/new-logo.jpg" alt="MILANA logo" />
-  <h1>MILANA</h1>
-  <p>Plant a Smile 🌱</p>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">BrandName</div>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn">Get Started</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Elevate Your Brand</h1>
+        <p>Crafting timeless, premium digital experiences.</p>
+        <a href="#portfolio" class="btn hero-btn">View Work</a>
+    </div>
 </header>
 
-<section>
-  <div class="title"><h2>Our Green Collection</h2></div>
-  <div class="carousel">
-    <div class="slides">
-      <img src="images/plant-1.JPG" />
-      <img src="images/pot-1.JPG" />
-      <img src="images/packaging-1.JPG" />
+<!-- ABOUT -->
+<section id="about" class="section about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            We are a boutique creative studio focused on building elegant,
+            minimal and premium digital products. Our work blends strategy,
+            aesthetics, and purpose.
+        </p>
     </div>
-  </div>
 </section>
 
-<section>
-  <div class="title"><h2>Pots</h2></div>
-  <div class="grid">
-    <div class="card"><img src="images/pot-1.jpg" /><h3>Ceramic Pot</h
+<!-- SERVICES -->
+<section id="services" class="section services">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Brand Identity</h3>
+                <p>Luxury branding that tells your story with clarity.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Minimal, premium websites built for performance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Creative Strategy</h3>
+                <p>Design systems that scale with your business.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section portfolio">
+    <div class="container">
+        <h2>Our Work</h2>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Project One</div>
+            <div class="portfolio-item">Project Two</div>
+            <div class="portfolio-item">Project Three</div>
+            <div class="portfolio-item">Project Four</div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section testimonials">
+    <div class="container">
+        <h2>What Clients Say</h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Absolutely stunning work. Clean, classy and effective."</p>
+                <h4>— Client One</h4>
+            </div>
+            <div class="testimonial">
+                <p>"They understood our vision and elevated it beautifully."</p>
+                <h4>— Client Two</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 BrandName. Crafted with elegance.</p>
+</footer>
+
+</body>
+</html>
