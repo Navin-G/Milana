@@ -14,6 +14,13 @@ h1, h2 {
   font-family: 'Playfair Display', serif;
 }
 
+responsive-img {
+  max-width: 100%; /* Ensures the image scales down to fit its container's width */
+  height: auto;    /* Maintains the original aspect ratio */
+  display: block;  /* Helps with centering and layout control */
+  margin: 0 auto;  /* Centers the image horizontally if it's smaller than the container */
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
