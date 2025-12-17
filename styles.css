@@ -18,7 +18,7 @@ h1, h2 {
   opacity: 1;
 }
 
-.overlay {
+.imageoverlay {
   position: absolute;
   top: 0;
   bottom: 0;
