@@ -64,7 +64,7 @@ h1, h2 {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100vh;              /* default for desktops */
+  height: 120vh;              /* default for desktops */
   min-height: 520px;          /* prevents too small hero */
   background: #000;
 }
