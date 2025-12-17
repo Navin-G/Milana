@@ -89,7 +89,7 @@ h1, h2 {
 /* ========================= */
 @media (max-width: 600px) {
   .hero-slider {
-    height: 70vh;             /* shorter for mobile */
+    height: 54vh;             /* shorter for mobile */
     min-height: 380px;
   }
 
@@ -113,7 +113,7 @@ h1, h2 {
 /* ========================= */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .hero-slider {
-    height: 120vh;
+    height: 135vh;
   }
 }
 
