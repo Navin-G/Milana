@@ -59,24 +59,72 @@ h1, h2 {
 }
 
 /* HERO SLIDER */
+
+/* HERO SLIDER – BASE */
 .hero-slider {
   position: relative;
-  height: 147vh;
- /* overflow: hidden;*/
+  width: 100%;
+  height: 100vh;              /* default for desktops */
+  min-height: 520px;          /* prevents too small hero */
+  background: #000;
 }
 
+/* SLIDES */
 .slides {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   display: none;
 }
 
+/* IMAGE */
 .slides img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: contain;        /* NO zoom / NO crop */
   background: #000;
+}
+
+/* ========================= */
+/* 📱 MOBILE (phones) */
+/* ========================= */
+@media (max-width: 600px) {
+  .hero-slider {
+    height: 70vh;             /* shorter for mobile */
+    min-height: 380px;
+  }
+
+  .slides img {
+    object-fit: contain;
+  }
+}
+
+/* ========================= */
+/* 📱 TABLETS (iPad) */
+/* ========================= */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero-slider {
+    height: 85vh;
+    min-height: 500px;
+  }
+}
+
+/* ========================= */
+/* 💻 LAPTOPS */
+/* ========================= */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-slider {
+    height: 100vh;
+  }
+}
+
+/* ========================= */
+/* 🖥 LARGE SCREENS */
+/* ========================= */
+@media (min-width: 1441px) {
+  .hero-slider {
+    height: 110vh;            /* premium tall look */
+    max-height: 1200px;
+  }
 }
 
 .hero-overlay {
