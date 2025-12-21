@@ -51,6 +51,12 @@ h1, h2 {
   color: #556b2f;
 }
 
+.logo1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4F3727;
+}
+
 .btn {
   background: #556b2f;
   color: white;
