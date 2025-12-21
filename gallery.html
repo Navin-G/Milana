@@ -76,10 +76,56 @@ footer {
   font-size: 12px;
   color: #8a9b8a;
 }
+
+  /* ---------------- BACK BUTTON ---------------- */
+.back-btn {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: #2e3b2e;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+  z-index: 1000;
+
+  /* animation */
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideInBack 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Hover luxury feel */
+.back-btn:hover {
+  background: #2e3b2e;
+  color: #ffffff;
+  transform: translateX(-6px);
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes slideInBack {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 </style>
 </head>
 
 <body>
+
+  <a href="index.html" class="back-btn">← Back</a>
 
 <header>
   <h1>Succulent Collection</h1>
@@ -90,14 +136,14 @@ footer {
   <div class="gallery" id="gallery">
 
     <!-- Add as many succulent images as you want -->
-    <img src="images/s1.jpg" alt="Succulent">
-    <img src="images/s2.jpg" alt="Succulent">
-    <img src="images/s3.jpg" alt="Succulent">
-    <img src="images/s4.jpg" alt="Succulent">
-    <img src="images/s5.jpg" alt="Succulent">
-    <img src="images/s6.jpg" alt="Succulent">
-    <img src="images/s7.jpg" alt="Succulent">
-    <img src="images/s8.jpg" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/101.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/102.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/201.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/201.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/301.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/302.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/401.JPG" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/402.JPG" alt="Succulent">
 
   </div>
 </div>
