@@ -28,3 +28,20 @@ document.querySelectorAll('.auto-swap').forEach(card => {
   }, 3000); // 3 seconds
 });
 
+/* SECTION SCROLL REVEAL */
+const sections = document.querySelectorAll(".reveal");
+
+function revealSections() {
+  const triggerPoint = window.innerHeight - 120;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerPoint) {
+      section.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
