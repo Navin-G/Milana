@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outdoor Plants| MILANA</title>
+
+<style>
+/* ---------------- GLOBAL ---------------- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f7f8f5, #eef2ea);
+  color: #2e3b2e;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #6b7c6b;
+  font-size: 14px;
+}
+
+/* ---------------- GALLERY ---------------- */
+.gallery-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px 80px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+/* ---------------- IMAGE CARD ---------------- */
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 
+    opacity 1s ease,
+    transform 0.8s ease,
+    box-shadow 0.8s ease;
+  opacity: 1;
+}
+
+/* Hover luxury feel */
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+/* Fade out */
+.fade-out {
+  opacity: 0;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  color: #8a9b8a;
+}
+
+  /* ---------------- BACK BUTTON ---------------- */
+.back-btn {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: #2e3b2e;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+  z-index: 1000;
+
+  /* animation */
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideInBack 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Hover luxury feel */
+.back-btn:hover {
+  background: #2e3b2e;
+  color: #ffffff;
+  transform: translateX(-6px);
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes slideInBack {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <a href="index.html" class="back-btn">← Back</a>
+
+<header>
+  <h1>Outdoor Plants</h1>
+  <p>Bright • Sunlight • Greens</p>
+</header>
+
+<div class="gallery-wrapper">
+  <div class="gallery" id="gallery">
+
+    <!-- Add as many succulent images as you want -->
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/0501.jpg" alt="Succulent">
+    <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/0502.jpg" alt="Succulent">
+        <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/901.jpg" alt="Succulent">
+        <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/902.jpg" alt="Succulent">
+        <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/4001.jpg" alt="Succulent">
+        <img src="https://raw.githubusercontent.com/Navin-G/Milana/main/4002.jpg" alt="Succulent">
+
+  </div>
+</div>
+
+<footer>
+  © MILANA • Plant a Smile 🌱
+</footer>
+
+<script>
+/* --------- SHUFFLE FUNCTION --------- */
+function shuffleGallery() {
+  const gallery = document.getElementById('gallery');
+  const images = Array.from(gallery.children);
+
+  images.forEach(img => img.classList.add('fade-out'));
+
+  setTimeout(() => {
+    images.sort(() => Math.random() - 0.5);
+    images.forEach(img => gallery.appendChild(img));
+    images.forEach(img => img.classList.remove('fade-out'));
+  }, 900);
+}
+
+/* Shuffle every 3 seconds */
+setInterval(shuffleGallery, 3000);
+</script>
+
+</body>
+</html>
